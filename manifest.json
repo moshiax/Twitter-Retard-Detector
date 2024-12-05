@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "version": "6.6.6",
+  "name": "Twitter IQ detector",
+  "description": "Detects retard on Twitter",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.x.com/*",
+        "https://www.x.com/*",
+        "https://twitter.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["autoconfirm.js", "style.css"], 
+      "matches": [
+        "https://www.x.com/*",
+        "https://twitter.com/*"
+      ]
+    }
+  ],
+  "icons": {
+    "256": "icon.png"
+  }
+}

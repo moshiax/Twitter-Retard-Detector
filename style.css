@@ -1,0 +1,24 @@
+
+.custom-badge {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: #000000;
+    color: red;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6);
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.custom-badge:hover {
+    transform: scale(1.1);
+}

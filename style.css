@@ -1,24 +1,9 @@
-.custom-badge {
-    border-color: rgba(0, 0, 0, 0);
-    background-color: rgba(0, 0, 0, 0);
-    color: red;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 12px;
-    text-align: center;
-    display: contents;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 40px;
-    margin-top: 10px;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6);
-    text-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.6);
-    transition: transform 0.3s ease;
-    z-index: 9999;
-}
 
-.custom-badge:hover {
-    transform: scale(1.1);
+.highlight {
+    background-color: #FF5722;
+    color: #000;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 2px 4px;
+    transition: all 0.3s ease;
 }

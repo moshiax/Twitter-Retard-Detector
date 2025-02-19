@@ -1,92 +1,95 @@
 const retardedKeywords = [
-    'free palestine', 'trans', 'they/them', 'she/her', 
-    'she/he', 'xe/xem', 'ze/zir', 'ey/em', '🇵🇸', '🏳️‍⚧️', 'any/all', '🏳️‍🌈', 'pronouns', 'транс', 'FreePalestine', 'they', 'LGBTQ', 'free Palestine',
-    '𝐋𝐆𝐁𝐓', '𝗟𝗚𝗕𝗧', '𝐿𝐺𝐵𝑇', '𝑳𝑮𝑩𝑻', '𝗟𝗚𝗕𝗧', 
-    'gender fluid', 'nonbinary', 'cis', 'cisgender', 'genderqueer', 'agender', 'bigender', 'two-spirit', 'binary', 'gender-neutral',
-    'intersectionality', 'queer', 'fluidity', 'neopronouns', 'demiboy', 'demigirl', 'fae/faer', 'it/its', 'she/her', 'they/them',
-    '🏳️‍⚧', '🌈', 'pride', 'pridemonth', 'transgender', 'transsexual', ' HRT ', '𝘁𝗵𝗲𝘆', 'Pansexual', 'Polyamorous',
-    'INTJ', 'INTP', 'ENTJ', 'ENTP', 'INFJ', 'INFP', 'ENFJ', 'ENFP',
-    'ISFJ', 'ISFP', 'ESFJ', 'ESFP', 'ISTJ', 'ISTP', 'ESTJ', 'ESTP',
-    'INTJ-A', 'INTJ-T', 'INTP-A', 'INTP-T', 'ENTJ-A', 'ENTJ-T', 'ENTP-A', 'ENTP-T',
-    'INFJ-A', 'INFJ-T', 'INFP-A', 'INFP-T', 'ENFJ-A', 'ENFJ-T', 'ENFP-A', 'ENFP-T',
-    'ISFJ-A', 'ISFJ-T', 'ISFP-A', 'ISFP-T', 'ESFJ-A', 'ESFJ-T', 'ESFP-A', 'ESFP-T', 
-    'ISTJ-A', 'ISTJ-T', 'ISTP-A', 'ISTP-T', 'ESTJ-A', 'ESTJ-T', 'ESTP-A', 'ESTP-T'
+'гендерно-нейтральний', 'гендерно-нейтральный', 'интерсекциональность', 'intersectionality', 'free palestine', 'gender-neutral', 'месяц гордости',
+'freepalestine', 'вона/він/вони', 'месяцгордости', 'транссексуал', 'gender fluid', 'гендерфлюїд', 'неопронouns',
+'трансгендер', 'genderqueer', 'neopronouns', 'transgender', 'transsexual', 'гендерфлюід', 'гендерфлюид',
+'нейровідмін', 'genderfluid', 'займенники', 'экстраверт', 'екстраверт', 'гендерквір', 'флюїдність',
+'пансексуал', 'two-spirit', 'pridemonth', 'небинарный', 'гендерквир', 'флюидность', 'вони/вона',
+'they/them', 'цисгендер', 'вона/воно', 'вона/вона', 'вони/вони', 'extrovert', 'extravert',
+'nonbinary', 'cisgender', 'pansexual', 'transphob', 'бисексуал', '𝐋𝐆𝐁𝐓', '𝗟𝗚𝗕𝗧',
+'𝐿𝐺𝐵𝑇', '𝑳𝑮𝑩𝑻', 'вона/він', 'він/вони', 'pronouns', 'бінарний', 'демігёрл',
+'фае/фаер', 'поліамор', 'транс', 'bigender', 'fluidity', 'demigirl', 'fae/faer',
+'polyamor', 'homophob', 'лесбійка', 'бигендер', 'два духа', 'демигёрл', 'гордость',
+'полиамор', 'трансфоб', 'асексуал', 'меломан', 'мізогін', 'she/her', 'any/all',
+'агендер', 'гомофоб', 'ейблізм', 'agender', 'demiboy', 'fatphob', 'ableism',
+'небинар', 'демибой', 'оно/оно', 'она/она', 'они/они', 'эйблизм', '🏳️‍🌈',
+'🏳️‍⚧️', 'she/he', 'xe/xem', 'ze/zir', 'intj-a', 'амбиверт', 'intj-t',
+'intp-a', 'intp-t', 'entj-a', 'entj-t', 'entp-a', 'entp-t', 'infj-a',
+'infj-t', 'infp-a', 'infp-t', 'enfj-a', 'enfj-t', 'enfp-a', 'enfp-t',
+'isfj-a', 'isfj-t', 'isfp-a', 'isfp-t', 'esfj-a', 'esfj-t', 'esfp-a',
+'esfp-t', 'istj-a', 'istj-t', 'istp-a', 'istp-t', 'estj-a', 'estj-t',
+'estp-a', 'estp-t', 'фетфоб', 'расис', 'расист', 'сексиз', 'сексис',
+'binary', 'it/its', 'фэтфоб', 'trans', 'ey/em', 'lgbtq', 'queer',
+'pride', 'racis', 'sexis', '🇵🇸', 'интроверт', 'слюр', 'intj',
+'intp', 'entj', 'entp', 'infj', 'infp', 'enfj', 'enfp',
+'slay', 'they', 'isfj', 'isfp', 'esfj', 'esfp', 'istj',
+'istp', 'estj', 'estp', 'ixtj', 'лгбт', 'квір', 'lgbt',
+'квир', 'hrt', 'cis', 'цис', 'інтергендер', '🏳‍⚧', '🏳‍🌈',
+'він/вони/вона', 'він/вона', 'вона/вони', 'він/вона/вони', 'трансдевушка', 'феміністка', 'вона/її',
+'радфем', 'русофобка', 'ейджис', 'ейбліс', 'вони/їх',
 ];
+const retardedKeywordsArray = [];
 
-const detectAndAddBadge = () => {
+retardedKeywordsArray.push(...retardedKeywords);
+retardedKeywordsArray.forEach(word => {
+  if (word.includes(' ')) {
+    retardedKeywordsArray.push(word.replace(/\s+/g, ''));
+  }
+
+  const wordWithI = word.replace(/и/g, 'і');
+  if (word !== wordWithI) {
+    retardedKeywordsArray.push(wordWithI);
+  }
+});
+
+console.log(JSON.stringify(retardedKeywordsArray));
+
+const detectAndAddHighlight = () => {
     const users = document.querySelectorAll('div[data-testid="UserName"]');
     const userDescriptions = document.querySelectorAll('div[data-testid="UserDescription"]');
     const images = document.querySelectorAll('img[alt="🇵🇸"], img[alt="🏳️‍🌈"], img[alt="🏳️‍⚧️"], img[alt="⚧️"]');
     const userLocations = document.querySelectorAll('span[data-testid="UserLocation"]');
 
-    const keywordPattern = new RegExp(retardedKeywords.join('|'), 'i');
+    const matchedWords = new Set();
+    const sortedKeywords = retardedKeywordsArray.sort((a, b) => b.length - a.length);
 
     users.forEach((profileName, index) => {
         const userDescription = userDescriptions[index];
         const userLocation = userLocations[index];
         const userImage = images[index];
 
-        const isNameRelevant = profileName && keywordPattern.test(profileName.textContent.toLowerCase());
-        const isDescriptionRelevant = userDescription && keywordPattern.test(userDescription.textContent.toLowerCase());
-        const isImagesRelevant = userImage && keywordPattern.test(userImage.alt.toLowerCase());
-        const isLocationRelevant = userLocation && keywordPattern.test(userLocation.textContent.toLowerCase());
+        const allElements = [profileName, userDescription, userImage, userLocation];
 
-        const closestDiv = profileName.closest('div');
-        const existingBadge = closestDiv.querySelector('.custom-badge');
+        allElements.forEach(detectedElement => {
+            if (detectedElement) {
+                let elementText = detectedElement.textContent || detectedElement.alt || '';
 
-        if (!isNameRelevant && !isDescriptionRelevant && !isImagesRelevant && !isLocationRelevant && existingBadge) {
-            existingBadge.remove();
-        }
+                sortedKeywords.forEach(word => {
+                    const isEmoji = /\p{Emoji}/u.test(word);
+                    const regex = new RegExp(`(?<=^|\\s|[^\\wа-яА-Я])(${word}[\\p{L}]{0,3})(?=\\s|[^\\wа-яА-Я]|$)`, 'giu');
+                    
+                    if (isEmoji) {
+                        elementText = elementText.replace(new RegExp(`(${word})`, 'g'), '<span class="highlight">$1</span>');
+                    } else {
+                        if (regex.test(elementText)) {
+                            if (!matchedWords.has(word)) {
+                                matchedWords.add(word);
+                                elementText = elementText.replace(regex, '<span class="highlight">$1</span>');
+                            }
+                        }
+                    }
+                });
 
-        if ((isNameRelevant || isDescriptionRelevant || isImagesRelevant || isLocationRelevant) && !existingBadge) {
-            const detectedElement = profileName || userDescription || userImage || userLocation;
-            const badge = document.createElement('button');
-            badge.setAttribute('aria-label', 'Opinion: Retarded');
-            badge.setAttribute('role', 'button');
-            badge.classList.add('custom-badge');
-            badge.type = 'button';
-
-            const badgeText = document.createElement('span');
-            badgeText.textContent = 'Opinion: Retarded';
-            badge.appendChild(badgeText);
-
-            detectedElement.closest('div').appendChild(badge);
-
-            console.log(`Badge created for user: ${profileName.textContent}`);
-        }
+                if (!detectedElement.querySelector('span.highlight') && elementText !== detectedElement.innerHTML) {
+                    detectedElement.innerHTML = elementText;
+                }
+            }
+        });
     });
 };
 
 const monitorPageChanges = () => {
-    let currentURL = window.location.href;
-
-    const getProfileURL = (url) => {
-        const path = url.split('?')[0];
-        const fragments = path.split('/');
-        return fragments.slice(0, 4).join('/');
-    };
-
-    const isSignificantChange = (newURL) => {
-        return getProfileURL(currentURL) !== getProfileURL(newURL);
-    };
-
-    const onURLChange = () => {
-        if (window.location.href !== currentURL) {
-            currentURL = window.location.href;
-
-            if (isSignificantChange(window.location.href)) {
-                const existingBadges = document.querySelectorAll('.custom-badge');
-                existingBadges.forEach(badge => badge.remove());
-            }
-
-            setTimeout(detectAndAddBadge);
-        }
-    };
-
-    window.addEventListener('popstate', onURLChange);
-
     const observer = new MutationObserver(() => {
-        detectAndAddBadge();
+        detectAndAddHighlight(); 
     });
 
     observer.observe(document.body, {
@@ -95,5 +98,9 @@ const monitorPageChanges = () => {
     });
 };
 
-monitorPageChanges();
-detectAndAddBadge();
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        monitorPageChanges();
+        detectAndAddHighlight();
+    }, 1); 
+});
